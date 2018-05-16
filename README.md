@@ -1,7 +1,7 @@
 # Global-Computing-langs
 Exercises for "Linguaggi per il Global Computing" course
 
-- Some tutorials fo Go-lang
+- Some tutorials for Go-lang
 - ...
 
 ![alt text](resources/golang.jpg?raw=true "")
