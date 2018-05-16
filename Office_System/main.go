@@ -10,6 +10,8 @@ func main(){
   machine.SetPrice("Tea",2)
   machine.SetPrice("Coffee",3)
   go machine.Run()
-  scientist := cs.New()
-  scientist.Run(machine)
+  cs1 := cs.New("1")
+  go cs1.Run(machine)
+  cs2 := cs.New("2")
+  cs2.Run(machine)
 }

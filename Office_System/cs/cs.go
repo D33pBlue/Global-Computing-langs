@@ -8,11 +8,12 @@ import (
 )
 
 type CS struct {
+  name string
   Money int
 }
 
-func New() *CS {
-  return &CS{0}
+func New(name string) *CS {
+  return &CS{name,0}
 }
 
 func (self *CS)Run(machine *ctm.CTM){
@@ -30,11 +31,11 @@ func (self *CS)Run(machine *ctm.CTM){
     var m int
     select {
     case beverage := <- machine.Drink:
-      fmt.Printf("CS: drink %s\n",beverage)
+      fmt.Printf("CS%s: drink %s\n",self.name,beverage)
       m = <-machine.Change
     case m = <-machine.Change:
     }
     self.Money = m
-    fmt.Printf("CS: got back %d money\n",m)
+    fmt.Printf("CS%s: got back %d money\n",self.name,m)
   }
 }
