@@ -1,6 +1,8 @@
 # Global-Computing-langs
-Exercises for "Linguaggi per il Global Computing" course
+Exercises for "Global Computing languages" course
 
+- Channels in Erlang
+- Actor system in Go-lang
 - Some tutorials for Go-lang
 - Dining Philosophers
 - Producers and Consumers
